@@ -35,6 +35,20 @@ public class app {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        
+        double perGallon = 350;
+        System.out.print("Enter length: ");
+
+        double length = in.nextDouble();
+
+        System.out.print("Enter width: ");
+
+        double width = in.nextDouble();
+
+        double totalSq = length*width;
+
+        int gallon = (int)Math.ceil(totalSq/perGallon);
+        //to round to the nearest whole number
+
+        System.out.println("You will need to purchase " + gallon + " gallons of paint to cover " + totalSq + " square feet");
     }
 }
